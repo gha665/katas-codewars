@@ -4,23 +4,22 @@
 
 let phrase = "This website is for losers LOL!";
 
-let phrase = "This website is for losers LOL!";
-
-function disemvowel(str) {
-  const vowels = ["a", "e", "i", "o", "u"];
-
-  return str
-    .split("")
-    .filter(function (el) {
-      return vowels.indexOf(el.toLowerCase()) == -1;
-    })
-    .join("");
-}
-
-disemvowel(phrase);
-
 // function disemvowel(str) {
-//   string = str.map((x) => x.replace(/[aeiou]/g, ""));
-// }
+//   const vowels = ["a", "e", "i", "o", "u"];
 
+//   return str
+//     .split("")
+//     .filter(function (el) {
+//       return vowels.indexOf(el.toLowerCase()) == -1;
+//     })
+//     .join("");
+// }
 // disemvowel(phrase);
+
+
+
+//better solution
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, "");
+}
+disemvowel(phrase);
